@@ -48,6 +48,7 @@ subnet_id = module.blog_vpc.public_subnets[0]
 
 module "alb" {
   source = "terraform-aws-modules/alb/aws"
+  version = "~> 6.0"
   name    = "blog-alb"
   
   load_balancer_type = "application"
