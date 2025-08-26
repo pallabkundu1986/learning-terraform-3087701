@@ -57,7 +57,7 @@ module "alb" {
   security_groups = [module.blog_sg.security_group_id]
 
 
-  target_groups = {
+  target_groups = [
     {
       name_prefix      = "blog"
       backend_protocol = "HTTP"
@@ -70,7 +70,7 @@ module "alb" {
     }
   }
   }
-  }
+  ]
   
   http_tcp_listeners = [
   {
@@ -78,7 +78,7 @@ module "alb" {
       protocol = "HTTP"
       target_groups_index = 0
     }
-  }
+  ]
 
 
   tags = {
