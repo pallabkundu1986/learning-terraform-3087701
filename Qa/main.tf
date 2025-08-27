@@ -1,7 +1,7 @@
 module "Qa" {
   source = "../Modules/blog"
   environment = {
-    name = "qa"
+    name = "Qa"
     network_prefix = "10.1"
   }
   asg_min = 1
